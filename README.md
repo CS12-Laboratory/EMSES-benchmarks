@@ -4,6 +4,16 @@ This repository contains the complete benchmarking harness for the MPI-based sim
 
 ---
 
+## 🚀 Benchmark Results by Experiment
+
+| Experiment       | Plot                                           |
+|------------------|------------------------------------------------|
+| exp_hole         | ![hole](results/exp_hole/gprof_compare_hole.png)          |
+| exp_probe        | ![probe](results/exp_probe/gprof_compare_probe.png)       |
+| exp_spacecraft   | ![spacecraft](results/exp_spacecraft/gprof_compare_spacecraft.png) |
+
+---
+
 ## 📂 Repository Structure
 
 ```
