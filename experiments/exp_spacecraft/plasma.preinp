@@ -1,0 +1,184 @@
+!!key dx=[0.01],to_c=[10000.0]
+
+!!!!!!!!!!!!!!! Physical constants !!!!!!!!!!!!!!!!!!!!!!!
+!!> var electron_mass = 9.1093837015e-31
+!!> var epsilon_0 = 8.85418782e-12
+!!> var e = 1.602176634e-19
+!!> var kb = 1.380649e-23
+
+!!> var ion_to_electron_mass_ratio = 500
+!!> var ion_mass = electron_mass * ion_to_electron_mass_ratio
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+!!!!!!!!!!!!!!! INPUT Parameters !!!!!!!!!!!!!!!!!!!!!!!
+!!> var plasma_density_cc = 1e5
+
+!!> var electron_temperature_K = 3000
+!!> var ion_temperature_K = 1000
+
+!!> var plasma_flow_speed_km_s = 30
+
+!!> var sphere_potential_V = -7.5
+
+!!> var surface_altitude_grid = 60
+!!> var hole_width_grid = 10
+!!> var hole_depth_grid = 40
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+!!!!!!!!!!!!!!! Simulation Parameters !!!!!!!!!!!!!!!!!!!!!!!
+!!> var npcls_per_grid = 64
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+!!!!!!!!!!!!!!! Tempolary variables !!!!!!!!!!!!!!!!!!!!!
+!!> var electron_frequency = sqrt(plasma_density_cc*1e6*e*e/electron_mass/epsilon_0)
+!!> var ion_frequency = sqrt(plasma_density_cc*1e6*e*e/ion_mass/epsilon_0)
+
+!!> var electron_thermal_speed = sqrt(kb*electron_temperature_K/electron_mass)
+!!> var ion_thermal_speed = sqrt(kb*ion_temperature_K/ion_mass)
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+&real
+/
+
+&realcv
+/
+
+&esorem
+  emflag = 0
+/
+
+&jobcon
+  jobnum = 0,1,
+  nstep  = 10000
+/
+
+&digcon
+  hdfdigstart = 0,
+  intfoc   = 100,
+  ifdiag   = 1000,
+  ijdiag   = 1000,
+  daverg   = 2,
+  ipahdf(1)= 0,
+  ipadig(1)= 1024,
+  ipahdf(2)= 0,
+  ipadig(2)= 1024,
+  ipaxyz   = 0,0,0,0,0,0, 0,0,0,0,0,0,
+  ifxyz    = 1,1,1,1,1,1,1,
+  ijxyz    = 1,1,1
+/
+
+&plasma
+  !!> wp(1)    =  unit.f.trans(electron_frequency)
+  !!> wp(2)    =  unit.f.trans(ion_frequency)
+  wc       =  0.0d0,
+  cv       =  10000.0d0,
+  phiz     =  0.0d0,
+  phixy    =  0.0d0
+/
+
+&tmgrid
+  dt       = 0.01d0,
+  nx       = 128,
+  ny       = 128,
+  nz       = 126,
+/
+
+&system
+  nspec    = 2,
+  ionchg   = 0,
+  nfbnd    = 0,0,0,
+  npbnd    = 2,2,2, 2,2,2,
+  nflag_ecrct = 1,
+  mtd_vbnd = 1,1,1
+/
+
+&intp
+  qm(1)    = -1.0d0
+  !!> qm(2)    = 1.0/ion_to_electron_mass_ratio
+  !!> npin(1)  = npcls_per_grid*nx*ny*nz
+  !!> npin(2)  = npcls_per_grid*nx*ny*nz
+
+  !!> path(1)  = unit.v.trans(electron_thermal_speed)
+  !!> peth(1)  = unit.v.trans(electron_thermal_speed)
+  !!> path(2)  = unit.v.trans(ion_thermal_speed)
+  !!> peth(2)  = unit.v.trans(ion_thermal_speed)
+
+  !!> vdri(1)  = unit.v.trans(plasma_flow_speed_km_s*1e3)
+  vdthz(1) = 90.0d0,
+  vdthxy(1)= 0.0d0,
+  !!> vdri(2)  = unit.v.trans(plasma_flow_speed_km_s*1e3)
+  vdthz(2) = 90.0d0,
+  vdthxy(2)= 0.0d0
+/
+
+&inp
+  inpf(1)     = 1,
+  inpb(1)     = 1,
+  injct(1)    = 1,
+  npr(1)      = 524288,
+  inpf(2)     = 1,
+  inpb(2)     = 1,
+  injct(2)    = 1,
+  npr(2)      = 524288,
+/
+
+&ptcond
+  npc         = 4,
+  npcg        = 1,
+  pcgs(1)     = 4,
+  mtd_vchg(1) = 0,
+
+  geotype(1)  = 2,
+  bdyalign(1)   = 3,
+  bdyradius(1)  = 6.0d0,
+  bdyedge(1,1)  = 60.0d0,
+  bdyedge(2,1)  = 66.0d0,
+  bdycoord(1,1) = 64.0d0,
+  bdycoord(2,1) = 64.0d0,
+
+  geotype(2)  = 2,
+  bdyalign(2)   = 1,
+  bdyradius(2)  = 0.75d0,
+  bdyedge(1,2)  = 28.0d0,
+  bdyedge(2,2)  = 100.0d0,
+  bdycoord(1,2) = 64.0d0,
+  bdycoord(2,2) = 63.0d0,
+
+  geotype(3)  = 2,
+  bdyalign(3)   = 2,
+  bdyradius(3)  = 0.75d0,
+  bdyedge(1,3) = 28.0d0,
+  bdyedge(2,3) = 100.0d0,
+  bdycoord(1,3) = 63.0d0,
+  bdycoord(2,3) = 64.0d0,
+
+  geotype(4)  = 2,
+  bdyalign(4)   = 3,
+  bdyradius(4)  = 0.75d0,
+  bdyedge(1,4) = 48.0d0,
+  bdyedge(2,4) = 78.0d0,
+  bdycoord(1,4) = 64.0d0,
+  bdycoord(2,4) = 64.0d0,
+
+  modeww      = -2
+/
+
+&scrnt
+/
+
+&emissn
+/
+
+&dipole
+/
+
+&mpi
+  nodes        = 4,4,7
+/
+
+&verbose
+/
+

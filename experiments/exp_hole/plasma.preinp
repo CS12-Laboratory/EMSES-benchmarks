@@ -1,0 +1,166 @@
+!!key dx=[0.5],to_c=[10000.0]
+
+!!!!!!!!!!!!!!! Physical constants !!!!!!!!!!!!!!!!!!!!!!!
+!!> var electron_mass = 9.1093837015e-31
+!!> var epsilon_0 = 8.85418782e-12
+!!> var e = 1.602176634e-19
+
+!!> var ion_to_electron_mass_ratio = 1836.152673426
+!!> var ion_mass = electron_mass * ion_to_electron_mass_ratio
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+!!!!!!!!!!!!!!! INPUT Parameters !!!!!!!!!!!!!!!!!!!!!!!
+!!> var plasma_density_cc = 5
+
+!!> var electron_temperature_eV = 10
+!!> var ion_temperature_eV = 10
+!!> var pe_temperature_eV = 2.2
+
+!!> var pe_current_density_A_m2 = 4.5e-6
+
+!!> var plasma_flow_speed_km_s = 400
+
+!!> var sphere_potential_V = -7.5
+
+!!> var surface_altitude_grid = 60
+!!> var hole_width_grid = 10
+!!> var hole_depth_grid = 40
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+!!!!!!!!!!!!!!! Simulation Parameters !!!!!!!!!!!!!!!!!!!!!!!
+!!> var npcls_per_grid = 50
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+!!!!!!!!!!!!!!! Tempolary variables !!!!!!!!!!!!!!!!!!!!!
+!!> var electron_frequency = sqrt(plasma_density_cc*1e6*e*e/electron_mass/epsilon_0)
+!!> var ion_frequency = sqrt(plasma_density_cc*1e6*e*e/ion_mass/epsilon_0)
+
+!!> var electron_thermal_speed = sqrt(e*electron_temperature_eV/electron_mass)
+!!> var ion_thermal_speed = sqrt(e*ion_temperature_eV/ion_mass)
+!!> var pe_thermal_speed = sqrt(e*pe_temperature_eV/electron_mass)
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+&real
+/
+
+&realcv
+/
+
+&esorem
+    emflag = 0
+/
+
+&jobcon
+    jobnum(1:2) = 0, 1
+    nstep = 200000
+/
+
+&digcon
+    hdfdigstart = 0
+    intfoc = 100
+    ifdiag = 10000
+    ijdiag = 10000
+    daverg = 1
+    ipahdf(1:3) = 0, 0, 0
+    ipadig(1:3) = 1024, 1024, 1024
+    ipaxyz = 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+    ifxyz(1:7) = 1, 1, 1, 1, 1, 1, 1
+    ijxyz(1:3) = 1, 1, 1
+/
+
+&plasma
+    !!> wp(1)    =  unit.f.trans(electron_frequency)
+    !!> wp(2)    =  unit.f.trans(ion_frequency)
+    wc = 0.0
+    cv = 10000.0
+    phiz = 0.0
+    phixy = 0.0
+/
+
+&tmgrid
+    dt = 0.002
+    nx = 32
+    ny = 32
+    nz = 256
+/
+
+&system
+    nspec = 2
+    ionchg = 0
+    nfbnd(1:3) = 0, 0, 1
+    npbnd = 0, 0, 2, 0, 0, 2
+    nflag_ecrct = 1
+    mtd_vbnd = 0, 0, 1
+/
+
+&intp
+    qm(1) = -1.0
+    !!> qm(2)    = 1.0/ion_to_electron_mass_ratio
+    !!> npin(1)  = npcls_per_grid*nx*ny*nz
+    !!> npin(2)  = npcls_per_grid*nx*ny*nz
+
+    !!> path(1)  = unit.v.trans(electron_thermal_speed)
+    !!> peth(1)  = unit.v.trans(electron_thermal_speed)
+    !!> path(2)  = unit.v.trans(ion_thermal_speed)
+    !!> peth(2)  = unit.v.trans(ion_thermal_speed)
+
+    !!> vdri(1)  = unit.v.trans(plasma_flow_speed_km_s*1e3)
+    vdthz(1:3) = 0.0, 0.0
+    vdthxy(1:3) = 180.0, 180.0
+/
+
+&inp
+    inpf(1:3) = 1, 1, 1
+    inpb(1:3) = 1, 1, 1
+    injct(1:3) = 1, 1, 1
+    npr(1:3) = 524288, 524288, 524288
+/
+
+&ptcond
+    npc = 0
+    npcg = 0
+    pcgs(1) = 0
+    ccgs(1) = 0
+    mtd_vchg(1) = 0
+    modeww = -2
+
+    boundary_type = "rectangle-hole"
+    !!> zssurf = surface_altitude_grid
+    !!> var pad = int(0.5 * (nx - hole_width_grid))
+    !!> xlrechole(1:2) = pad, pad
+    !!> xurechole(1:2) = pad + hole_width_grid, pad + hole_width_grid
+    !!> ylrechole(1:2) = pad, pad
+    !!> yurechole(1:2) = pad + hole_width_grid, pad + hole_width_grid
+    !!> zlrechole(1:2) = surface_altitude_grid, surface_altitude_grid - hole_depth_grid
+    !!> zurechole(1:2) = surface_altitude_grid, surface_altitude_grid
+/
+
+&scrnt
+/
+
+&emissn
+    nflag_emit(1:2) = 0, 0
+    nepl(3) = 0
+    thetaz = 0.0
+    thetaxy = 180.0
+    imarea = 0.0, 0.0, 0.0
+    plreloc = 0.0
+/
+
+&dipole
+/
+
+&mpi
+    nodes(1:3) = 2, 2, 32
+/
+
+&verbose
+/
+
+&gradema
+    grad_coef = 1.0
+    smooth_coef = 1.0
+/
