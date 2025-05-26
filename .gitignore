@@ -265,4 +265,4 @@ experiments/**/*
 !experiments/**/plasma.preinp
 !experiments/**/*.xlsx
 !experiments/exp*/
-results/**/*.png
+# results/**/*.png
