@@ -54,10 +54,9 @@ benchmark-harness/
 
 ## 🚀 Quickstart
 
-1. **Prepare your experiment**
+1. **Prepare your executable**
 
-   * Edit `experiments/exp_<name>/params.yaml` and `job.sh` to match your environment and parameter settings.
-   * Ensure the simulation binary path in `job.sh` and `archive_gprof.sh` is correct.
+   * Build simulation binary (e.g. `mpiemses3D`)
 
 2. **Run all benchmarks**
 
