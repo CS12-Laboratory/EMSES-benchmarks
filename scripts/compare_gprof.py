@@ -86,7 +86,10 @@ def main():
         return
 
     stacked_df = build_stacked_dataframe(files, args.top)
-    ax = stacked_df.T.plot(kind="bar", stacked=True, figsize=(10, 6))
+    cmap = plt.get_cmap('tab20')    # 20 色の ListedColormap
+    n_segments = stacked_df.shape[0]   # 上位 top_n + 'others'
+    colors = [cmap(i) for i in range(n_segments)]  # 0～n_segments-1 の色
+    ax = stacked_df.T.plot(kind="bar", stacked=True, figsize=(10, 6), color=colors)
     ax.set_ylabel("Self Time (s)")
     ax.set_xlabel("Version@Host")
     ax.legend(
@@ -96,7 +99,7 @@ def main():
     )
     plt.xticks(rotation=45, ha="right")
     plt.tight_layout()
-    plt.savefig(args.out)
+    plt.savefig(path/args.out)
     print(f"Saved comparison chart to {args.out}")
 
 

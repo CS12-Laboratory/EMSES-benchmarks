@@ -17,4 +17,5 @@ exp_%:
 compare_%:
 	python3 scripts/compare_gprof.py \
 	  --dir results/exp_$* \
-	  --out gprof_compare_$*.png
+	  --out gprof_compare_$*.png \
+	  --top 10
