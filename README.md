@@ -94,8 +94,6 @@ benchmark-harness/
    make compare_all
    ```
 
-   *(You can add a `compare_all` target in the Makefile if desired.)*
-
 5. **View the plots**
    The PNG files `gprof_compare_<experiment>.png` will show stacked bar charts of top‑N functions + others across versions and hosts.
 
