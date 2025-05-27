@@ -8,7 +8,8 @@ EXEC=${1:-./mpiemses3D}
 GPFILE=${2:-gprof.txt}
 
 # バージョン取得
-VERSION=$("$EXEC" --version | head -n1 | tr -d '[:space:]')
+raw=$("$EXEC" --version | head -n1 | tr -d '[:space:]')
+VERSION=${raw%%-*}
 
 # ホスト名取得
 HOST=$(hostname)
