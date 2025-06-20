@@ -107,8 +107,8 @@
     !!> path(2)  = unit.v.trans(ion_thermal_speed)
     !!> peth(2)  = unit.v.trans(ion_thermal_speed)
 
-    !!> vdri(1)  = -unit.v.trans(plasma_flow_speed_km_s*1e3)
-    !!> vdri(2)  = -unit.v.trans(plasma_flow_speed_km_s*1e3)
+    !!> vdri(1)  = -1*unit.v.trans(plasma_flow_speed_km_s*1e3)
+    !!> vdri(2)  = -1*unit.v.trans(plasma_flow_speed_km_s*1e3)
     vdthz(1:3) = 0.0, 0.0, 0.0
     vdthxy(1:3) = 180.0, 180.0, 180.0
 /
