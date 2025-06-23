@@ -55,7 +55,7 @@
 
 &jobcon
     jobnum(1:2) = 0, 1
-    nstep = 200000
+    nstep = 100000
 /
 
 &digcon
