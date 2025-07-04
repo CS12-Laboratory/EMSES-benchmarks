@@ -1,0 +1,1087 @@
+Flat profile:
+
+Each sample counts as 0.01 seconds.
+  %   cumulative   self              self     total           
+ time   seconds   seconds    calls  Ks/call  Ks/call  name    
+ 63.79   4691.32  4691.32    10000     0.00     0.00  psolve_
+ 25.04   6533.16  1841.84    30001     0.00     0.00  charge_
+  2.93   6748.50   215.34    10003     0.00     0.00  move_to_sendbuf_primary
+  1.95   6891.65   143.15    10002     0.00     0.00  m_esses_mp_esses_mainstep_
+  1.39   6993.84   102.19                             impi_shm_progress
+  1.01   7068.03    74.19                             MPIR_Progress_hook_exec_on_vci
+  0.76   7124.00    55.97                             impi_shm_bcast
+  0.43   7155.28    31.28    20002     0.00     0.00  m_grad_ema_mp_grad_ema_update_rhobk_
+  0.41   7185.14    29.86                             MPIDI_Progress_test
+  0.36   7211.37    26.23    10000     0.00     0.00  psuper1_
+  0.29   7232.48    21.11    10003     0.00     0.00  hdfdig_IP_calculate_output_data_
+  0.21   7247.98    15.50    20003     0.00     0.00  m_esfield_mp_solve_poisson_
+  0.20   7262.72    14.74                             MPIDI_OFI_progress
+  0.19   7276.80    14.08                             progress_rings
+  0.13   7286.30     9.50                             MPIDI_OFI_get_buffered
+  0.11   7294.68     8.38                             progress_deserialization
+  0.09   7301.33     6.65                             impi_shm_reduce
+  0.08   7307.56     6.23                             MPIDI_SHMI_progress
+  0.06   7312.21     4.65                             I_MPI_memcpy_movsb
+  0.06   7316.33     4.12                             bdw_memcpy_write
+  0.06   7320.43     4.10 104515840     0.00     0.00  genrand_res53
+  0.05   7324.33     3.90                             MPID_Progress_wait
+  0.05   7327.64     3.31                             impi_shm_heap_progress
+  0.04   7330.67     3.03                             MPIDI_POSIX_progress
+  0.04   7333.69     3.02                             MPID_Progress_completion_count_get
+  0.04   7336.40     2.71                             psort_comp
+  0.03   7338.44     2.04    20000     0.00     0.00  try_stable1
+  0.02   7339.98     1.54                             MPIDI_SHMGR_release_generic
+  0.02   7341.46     1.48                             MPII_Segment_manipulate
+  0.01   7342.50     1.04    40004     0.00     0.00  m_poisson_comm_mp_rh2poi_
+  0.01   7343.49     0.99                             __I_MPI___intel_avx_rep_memcpy
+  0.01   7344.47     0.98        1     0.00     0.00  capmtx_
+  0.01   7345.39     0.92                             index_m2m
+  0.01   7346.05     0.66        1     0.00     0.00  inipin_
+  0.01   7346.70     0.65                             progress_serialization_frame
+  0.01   7347.33     0.63                             contig_pack_to_iov
+  0.01   7347.88     0.55                             MPIDU_Init_shm_barrier
+  0.01   7348.43     0.55                             vector_m2m
+  0.01   7348.95     0.52    50005     0.00     0.00  add_boundary_charge_
+  0.01   7349.41     0.46                             impi_free
+  0.01   7349.85     0.44 10729980     0.00     0.00  psuper1_IP_current_deposition_
+  0.01   7350.26     0.41        1     0.00     0.00  chgntr_
+  0.00   7350.57     0.31                             impi_malloc
+  0.00   7350.84     0.27                             deserialization_from_cell
+  0.00   7351.11     0.27                             impi_shm_isend
+  0.00   7351.37     0.26                             I_MPI_memcpy_sse
+  0.00   7351.58     0.21                             MPIDIG_send_origin_cb
+  0.00   7351.77     0.19                             MPID_Progress_idle_timer_tick
+  0.00   7351.95     0.18                             inject_cell
+  0.00   7352.11     0.16        1     0.00     0.00  inipcl_
+  0.00   7352.27     0.16                             MPIDI_POSIX_Bcast_intra_numa_aware
+  0.00   7352.42     0.15                             MPIDIG_send_target_msg_cb
+  0.00   7352.56     0.14       20     0.00     0.00  inipin_IP_assign_velocity_
+  0.00   7352.70     0.14                             recv_target_cmpl_cb
+  0.00   7352.81     0.11                             new_cell
+  0.00   7352.91     0.10                             MPIR_Sendrecv_impl
+  0.00   7352.99     0.08                             MPIDIG_do_irecv
+  0.00   7353.07     0.08                             PMPI_Isend
+  0.00   7353.15     0.08                             PMPI_Sendrecv
+  0.00   7353.22     0.07        1     0.00     0.00  save_esdat_
+  0.00   7353.28     0.06                             I_MPI_memcpy_multipage_sse
+  0.00   7353.34     0.06                             MPID_Progress_yield
+  0.00   7353.40     0.06                             MPII_Dataloop_stackelm_load
+  0.00   7353.46     0.06                             burst_alloc_forward_cells
+  0.00   7353.51     0.05 104505841     0.00     0.00  mtrand_real8_
+  0.00   7353.56     0.05                             MPIDIG_enqueue_unexp
+  0.00   7353.60     0.04 10729980     0.00     0.00  oh2_inject_particle
+  0.00   7353.64     0.04    10001     0.00     0.00  m_esses_mp_esses_charge_
+  0.00   7353.68     0.04        1     0.00     0.00  rescal_
+  0.00   7353.72     0.04                             MPIDI_GPU_request_free
+  0.00   7353.76     0.04                             MPIR_Request_create
+  0.00   7353.80     0.04                             MPIR_Segment_alloc
+  0.00   7353.84     0.04                             memcpy_loop_loadu_store_sse
+  0.00   7353.87     0.03    10003     0.00     0.00  hdfdig_
+  0.00   7353.90     0.03                             I_MPI_memcpy_compiler_noarch
+  0.00   7353.93     0.03                             MPIDI_CH4_check_container
+  0.00   7353.96     0.03                             noinline_progress
+  0.00   7353.99     0.03                             progress_serialization
+  0.00   7354.01     0.02    10003     0.00     0.00  hdfdig_IP_output_field_data_
+  0.00   7354.03     0.02    10003     0.00     0.00  transbound2
+  0.00   7354.05     0.02    10003     0.00     0.00  try_primary2
+  0.00   7354.07     0.02    10001     0.00     0.00  frmttd_
+  0.00   7354.09     0.02        1     0.00     0.01  m_esses_mp_esses_initialize_
+  0.00   7354.11     0.02                             MPIDI_coll_invoke
+  0.00   7354.13     0.02                             MPID_Reduce_invoke
+  0.00   7354.15     0.02                             MPIR_Alltoall_intra_brucks
+  0.00   7354.17     0.02                             MPIR_Request_create
+  0.00   7354.19     0.02                             MPIR_SUM_check_dtype
+  0.00   7354.21     0.02                             MPIR_Waitall
+  0.00   7354.23     0.02                             PMPI_Alltoall
+  0.00   7354.25     0.02                             memcpy_loop_load_store_sse
+  0.00   7354.27     0.02                             update_type_blockindexed
+  0.00   7354.29     0.02                             vector_pack_to_iov
+  0.00   7354.30     0.01    70005     0.00     0.00  oh3_exchange_borders_
+  0.00   7354.31     0.01    30003     0.00     0.00  m_poisson_comm_mp_gather_phi_from_work_
+  0.00   7354.32     0.01    30003     0.00     0.00  m_poisson_comm_mp_poi2phi_
+  0.00   7354.33     0.01    10003     0.00     0.00  transbound3
+  0.00   7354.34     0.01    10000     0.00     0.00  m_conductivity_mp_update_conductive_rhobk_
+  0.00   7354.35     0.01        1     0.00     0.00  inifld_
+  0.00   7354.36     0.01                             ADIOI_Flatten_and_find
+  0.00   7354.37     0.01                             ADIOI_Optimize_flattened
+  0.00   7354.38     0.01                             MPIC_Wait
+  0.00   7354.39     0.01                             MPIDI_OFI_coll_select
+  0.00   7354.40     0.01                             MPIDI_POSIX_eager_recv_posted_hook
+  0.00   7354.41     0.01                             MPIDI_anysrc_try_cancel_partner
+  0.00   7354.42     0.01                             MPIDU_Init_shm_init
+  0.00   7354.43     0.01                             MPID_Progress_idle_timer_start
+  0.00   7354.44     0.01                             MPID_Progress_test_impl
+  0.00   7354.45     0.01                             MPII_Dataloop_update
+  0.00   7354.46     0.01                             MPIR_Datatype_iscontig
+  0.00   7354.47     0.01                             MPIR_Localcopy
+  0.00   7354.48     0.01                             MPIR_Reduce_local
+  0.00   7354.49     0.01                             MPIR_Request_completion_processing
+  0.00   7354.50     0.01                             MPIR_Request_create
+  0.00   7354.51     0.01                             MPIR_Request_create
+  0.00   7354.52     0.01                             MPIR_Request_free
+  0.00   7354.53     0.01                             MPIR_Segment_to_iov
+  0.00   7354.54     0.01                             MPIR_T_cvar_init
+  0.00   7354.55     0.01                             MPIR_Typerep_commit
+  0.00   7354.56     0.01                             MPIR_Typerep_ipack
+  0.00   7354.57     0.01                             MPIR_Typerep_to_iov
+  0.00   7354.58     0.01                             MPIR_Typerep_unpack
+  0.00   7354.59     0.01                             MPIR_Waitall_impl
+  0.00   7354.60     0.01                             MPIU_Selection_find_entry
+  0.00   7354.61     0.01                             MPIU_Selection_set_coll_match_pattern
+  0.00   7354.62     0.01                             MPI_Type_contiguous
+  0.00   7354.63     0.01                             MPI_Waitall
+  0.00   7354.64     0.01                             MPL_wtime_acc
+  0.00   7354.65     0.01                             PMPI_Comm_size
+  0.00   7354.66     0.01                             PMPI_Irecv
+  0.00   7354.67     0.01                             __intel_cpu_features_init_body
+  0.00   7354.68     0.01                             blkidx_m2m
+  0.00   7354.69     0.01                             delete_unexp_request
+  0.00   7354.70     0.01                             get_1_sector
+  0.00   7354.71     0.01                             impi_reduce_local_2way
+  0.00   7354.72     0.01                             pmpi_irecv__
+  0.00   7354.73     0.01                             pmpi_isend_
+  0.00   7354.74     0.01                             pmpi_reduce__
+  0.00   7354.74     0.00 10729980     0.00     0.00  oh2_inject_particle_
+  0.00   7354.74     0.00  2359296     0.00     0.00  oh3_map_particle_to_subdomain
+  0.00   7354.74     0.00  2359296     0.00     0.00  oh3_map_particle_to_subdomain_
+  0.00   7354.74     0.00    70007     0.00     0.00  m_poisson_comm_mp_setup_domain_
+  0.00   7354.74     0.00    50010     0.00     0.00  sumcount_
+  0.00   7354.74     0.00    40004     0.00     0.00  m_poisson_mp_poisson_
+  0.00   7354.74     0.00    10003     0.00     0.00  hdfdig_IP_calculate_constants_
+  0.00   7354.74     0.00    10003     0.00     0.00  hdfdig_IP_output_particle_data_
+  0.00   7354.74     0.00    10003     0.00     0.00  oh3_transbound_
+  0.00   7354.74     0.00    10001     0.00     0.00  psuper3_
+  0.00   7354.74     0.00    10000     0.00     0.00  m_boundary_mp_get_default_extent_
+  0.00   7354.74     0.00    10000     0.00     0.00  m_plane_boundary_mp_planexyz_is_overlap_
+  0.00   7354.74     0.00    10000     0.00     0.00  m_str_mp_int_to_str_
+  0.00   7354.74     0.00    10000     0.00     0.00  particle_collision_mp_create_simple_collision_boundaries_
+  0.00   7354.74     0.00    10000     0.00     0.00  particle_collisioncreate_simple_collision_boundaries_mp_add_flat_surface_
+  0.00   7354.74     0.00      623     0.00     0.00  getccl_IP_chk_dupli_
+  0.00   7354.74     0.00      264     0.00     0.00  hdf5io_mp_wrt3d_p_
+  0.00   7354.74     0.00       40     0.00     0.00  particle_sort_
+  0.00   7354.74     0.00        4     0.00     0.00  mt_init_
+  0.00   7354.74     0.00        4     0.00     0.00  wrapper_mp_drann0s_
+  0.00   7354.74     0.00        4     0.00     0.00  wrapper_mp_randinit0_
+  0.00   7354.74     0.00        3     0.00     0.00  m_logging_mp_get_env_
+  0.00   7354.74     0.00        3     0.00     0.00  set_border_exchange
+  0.00   7354.74     0.00        2     0.00     0.00  inifft_
+  0.00   7354.74     0.00        2     0.00     0.00  lemses_mp_arymod_
+  0.00   7354.74     0.00        1     0.00     7.00  MAIN__
+  0.00   7354.74     0.00        1     0.00     0.00  chkprm_
+  0.00   7354.74     0.00        1     0.00     0.00  defmpi_
+  0.00   7354.74     0.00        1     0.00     0.00  digset_
+  0.00   7354.74     0.00        1     0.00     0.00  getccl_
+  0.00   7354.74     0.00        1     0.00     0.00  hdf5io_mp_hdfinit_
+  0.00   7354.74     0.00        1     0.00     0.00  init2
+  0.00   7354.74     0.00        1     0.00     0.00  init_genrand
+  0.00   7354.74     0.00        1     0.00     0.00  init_subdomain_actively
+  0.00   7354.74     0.00        1     0.00     0.00  inital_
+  0.00   7354.74     0.00        1     0.00     0.00  inital_IP_getgcd_
+  0.00   7354.74     0.00        1     0.00     0.00  inital_IP_lediv_
+  0.00   7354.74     0.00        1     0.00     0.00  input_
+  0.00   7354.74     0.00        1     0.00     0.00  m_grad_ema_mp_grad_ema_init_
+  0.00   7354.74     0.00        1     0.00     0.00  m_logging_mp_logging_initialize_
+  0.00   7354.74     0.00        1     0.00     0.00  oh1_fam_comm_
+  0.00   7354.74     0.00        1     0.00     0.00  oh2_max_local_particles
+  0.00   7354.74     0.00        1     0.00     0.00  oh2_max_local_particles_
+  0.00   7354.74     0.00        1     0.00     0.00  oh3_init_
+  0.00   7354.74     0.00        1     0.00     0.00  ohinit_
+
+ %         the percentage of the total running time of the
+time       program used by this function.
+
+cumulative a running sum of the number of seconds accounted
+ seconds   for by this function and those listed above it.
+
+ self      the number of seconds accounted for by this
+seconds    function alone.  This is the major sort for this
+           listing.
+
+calls      the number of times this function was invoked, if
+           this function is profiled, else blank.
+
+ self      the average number of milliseconds spent in this
+ms/call    function per call, if this function is profiled,
+	   else blank.
+
+ total     the average number of milliseconds spent in this
+ms/call    function and its descendents per call, if this
+	   function is profiled, else blank.
+
+name       the name of the function.  This is the minor sort
+           for this listing. The index shows the location of
+	   the function in the gprof listing. If the index is
+	   in parenthesis it shows where it would appear in
+	   the gprof listing if it were to be printed.
+
+Copyright (C) 2012-2018 Free Software Foundation, Inc.
+
+Copying and distribution of this file, with or without modification,
+are permitted in any medium without royalty provided the copyright
+notice and this notice are preserved.
+
+		     Call graph (explanation follows)
+
+
+granularity: each sample hit covers 4 byte(s) for 0.00% of 7354.74 seconds
+
+index % time    self  children    called     name
+                0.00 6996.69       1/1           main [2]
+[1]     95.1    0.00 6996.69       1         MAIN__ [1]
+              143.12 6847.52   10000/10002       m_esses_mp_esses_mainstep_ [3]
+                0.02    5.93       1/1           m_esses_mp_esses_initialize_ [26]
+                0.07    0.00       1/1           save_esdat_ [68]
+                0.00    0.02       1/10003       transbound3 [7]
+                0.00    0.00       1/10003       hdfdig_ [17]
+                0.00    0.00       1/1           hdf5io_mp_hdfinit_ [172]
+                0.00    0.00       1/1           oh1_fam_comm_ [181]
+                0.00    0.00       1/1           input_ [178]
+                0.00    0.00       1/10003       oh3_transbound_ [152]
+-----------------------------------------------
+                                                 <spontaneous>
+[2]     95.1    0.00 6996.69                 main [2]
+                0.00 6996.69       1/1           MAIN__ [1]
+-----------------------------------------------
+                               20000             m_esses_mp_esses_mainstep_ [3]
+                0.03    1.37       2/10002       m_esses_mp_esses_initialize_ [26]
+              143.12 6847.52   10000/10002       MAIN__ [1]
+[3]     95.1  143.15 6848.89   10002+20000   m_esses_mp_esses_mainstep_ [3]
+             4691.32    0.00   10000/10000       psolve_ [4]
+             1227.85    0.00   20000/30001       charge_ [5]
+                0.04  614.45   10000/10001       m_esses_mp_esses_charge_ [6]
+                0.01  215.32   10000/10003       transbound3 [7]
+               31.28    0.26   20000/20002       m_grad_ema_mp_grad_ema_update_rhobk_ [14]
+               26.23    2.61   10000/10000       psuper1_ [16]
+                0.03   21.39   10000/10003       hdfdig_ [17]
+               15.50    0.53   20000/20003       m_esfield_mp_solve_poisson_ [19]
+                2.04    0.00   20000/20000       try_stable1 [36]
+                0.02    0.00   10000/10001       frmttd_ [87]
+                0.01    0.00   10000/10000       m_conductivity_mp_update_conductive_rhobk_ [100]
+                0.00    0.00   20000/70005       oh3_exchange_borders_ [98]
+                0.00    0.00   10000/104515840     genrand_res53 [29]
+                0.00    0.00   10000/10001       psuper3_ [153]
+                0.00    0.00   10000/10003       oh3_transbound_ [152]
+                0.00    0.00   10000/10000       m_str_mp_int_to_str_ [156]
+                0.00    0.00      38/40          particle_sort_ [161]
+                               20000             m_esses_mp_esses_mainstep_ [3]
+-----------------------------------------------
+             4691.32    0.00   10000/10000       m_esses_mp_esses_mainstep_ [3]
+[4]     63.8 4691.32    0.00   10000         psolve_ [4]
+                0.00    0.00   10000/10000       particle_collision_mp_create_simple_collision_boundaries_ [157]
+-----------------------------------------------
+              613.99    0.00   10001/30001       m_esses_mp_esses_charge_ [6]
+             1227.85    0.00   20000/30001       m_esses_mp_esses_mainstep_ [3]
+[5]     25.0 1841.84    0.00   30001         charge_ [5]
+-----------------------------------------------
+                0.00    0.06       1/10001       m_esses_mp_esses_initialize_ [26]
+                0.04  614.45   10000/10001       m_esses_mp_esses_mainstep_ [3]
+[6]      8.4    0.04  614.51   10001         m_esses_mp_esses_charge_ [6]
+              613.99    0.00   10001/30001       charge_ [5]
+                0.52    0.00   50005/50005       add_boundary_charge_ [49]
+                0.01    0.00   50005/70005       oh3_exchange_borders_ [98]
+-----------------------------------------------
+                0.00    0.02       1/10003       MAIN__ [1]
+                0.00    0.04       2/10003       m_esses_mp_esses_initialize_ [26]
+                0.01  215.32   10000/10003       m_esses_mp_esses_mainstep_ [3]
+[7]      2.9    0.01  215.38   10003         transbound3 [7]
+                0.02  215.36   10003/10003       transbound2 [8]
+-----------------------------------------------
+                0.02  215.36   10003/10003       transbound3 [7]
+[8]      2.9    0.02  215.36   10003         transbound2 [8]
+                0.02  215.34   10003/10003       try_primary2 [9]
+-----------------------------------------------
+                0.02  215.34   10003/10003       transbound2 [8]
+[9]      2.9    0.02  215.34   10003         try_primary2 [9]
+              215.34    0.00   10003/10003       move_to_sendbuf_primary [10]
+-----------------------------------------------
+              215.34    0.00   10003/10003       try_primary2 [9]
+[10]     2.9  215.34    0.00   10003         move_to_sendbuf_primary [10]
+-----------------------------------------------
+                                                 <spontaneous>
+[11]     1.4  102.19    0.00                 impi_shm_progress [11]
+-----------------------------------------------
+                                                 <spontaneous>
+[12]     1.0   74.19    0.00                 MPIR_Progress_hook_exec_on_vci [12]
+-----------------------------------------------
+                                                 <spontaneous>
+[13]     0.8   55.97    0.00                 impi_shm_bcast [13]
+-----------------------------------------------
+                0.00    0.00       2/20002       m_esses_mp_esses_initialize_ [26]
+               31.28    0.26   20000/20002       m_esses_mp_esses_mainstep_ [3]
+[14]     0.4   31.28    0.26   20002         m_grad_ema_mp_grad_ema_update_rhobk_ [14]
+                0.26    0.00   10001/40004       m_poisson_comm_mp_rh2poi_ [39]
+                0.00    0.00   10001/40004       m_poisson_mp_poisson_ [149]
+-----------------------------------------------
+                                                 <spontaneous>
+[15]     0.4   29.86    0.00                 MPIDI_Progress_test [15]
+-----------------------------------------------
+               26.23    2.61   10000/10000       m_esses_mp_esses_mainstep_ [3]
+[16]     0.4   26.23    2.61   10000         psuper1_ [16]
+                2.10    0.00 53649900/104515840     genrand_res53 [29]
+                0.44    0.00 10729980/10729980     psuper1_IP_current_deposition_ [51]
+                0.04    0.00 10729980/10729980     oh2_inject_particle [75]
+                0.03    0.00 53649900/104505841     mtrand_real8_ [73]
+                0.00    0.00 10729980/10729980     oh2_inject_particle_ [144]
+-----------------------------------------------
+                0.00    0.00       1/10003       MAIN__ [1]
+                0.00    0.00       2/10003       m_esses_mp_esses_initialize_ [26]
+                0.03   21.39   10000/10003       m_esses_mp_esses_mainstep_ [3]
+[17]     0.3    0.03   21.40   10003         hdfdig_ [17]
+               21.11    0.27   10003/10003       hdfdig_IP_calculate_output_data_ [18]
+                0.02    0.00   10003/10003       hdfdig_IP_output_field_data_ [86]
+                0.00    0.00   10003/10003       hdfdig_IP_calculate_constants_ [150]
+                0.00    0.00   10003/10003       hdfdig_IP_output_particle_data_ [151]
+-----------------------------------------------
+               21.11    0.27   10003/10003       hdfdig_ [17]
+[18]     0.3   21.11    0.27   10003         hdfdig_IP_calculate_output_data_ [18]
+                0.26    0.00   10001/40004       m_poisson_comm_mp_rh2poi_ [39]
+                0.00    0.00   10001/30003       m_poisson_comm_mp_poi2phi_ [85]
+                0.00    0.00   10001/40004       m_poisson_mp_poisson_ [149]
+-----------------------------------------------
+                0.00    0.00       3/20003       m_esses_mp_esses_initialize_ [26]
+               15.50    0.53   20000/20003       m_esses_mp_esses_mainstep_ [3]
+[19]     0.2   15.50    0.53   20003         m_esfield_mp_solve_poisson_ [19]
+                0.52    0.00   20002/40004       m_poisson_comm_mp_rh2poi_ [39]
+                0.01    0.01   20002/30003       m_poisson_comm_mp_poi2phi_ [85]
+                0.00    0.00   20002/40004       m_poisson_mp_poisson_ [149]
+-----------------------------------------------
+                                                 <spontaneous>
+[20]     0.2   14.74    0.00                 MPIDI_OFI_progress [20]
+-----------------------------------------------
+                                                 <spontaneous>
+[21]     0.2   14.08    0.00                 progress_rings [21]
+-----------------------------------------------
+                                                 <spontaneous>
+[22]     0.1    9.50    0.00                 MPIDI_OFI_get_buffered [22]
+-----------------------------------------------
+                                                 <spontaneous>
+[23]     0.1    8.38    0.00                 progress_deserialization [23]
+-----------------------------------------------
+                                                 <spontaneous>
+[24]     0.1    6.65    0.00                 impi_shm_reduce [24]
+-----------------------------------------------
+                                                 <spontaneous>
+[25]     0.1    6.23    0.00                 MPIDI_SHMI_progress [25]
+-----------------------------------------------
+                0.02    5.93       1/1           MAIN__ [1]
+[26]     0.1    0.02    5.93       1         m_esses_mp_esses_initialize_ [26]
+                0.66    1.60       1/1           inipin_ [35]
+                0.03    1.37       2/10002       m_esses_mp_esses_mainstep_ [3]
+                0.98    0.00       1/1           capmtx_ [41]
+                0.16    0.56       1/1           inipcl_ [44]
+                0.41    0.00       1/1           chgntr_ [52]
+                0.00    0.06       1/10001       m_esses_mp_esses_charge_ [6]
+                0.00    0.04       2/10003       transbound3 [7]
+                0.04    0.00       1/1           rescal_ [76]
+                0.01    0.00       1/1           inifld_ [101]
+                0.00    0.00       2/10003       hdfdig_ [17]
+                0.00    0.00       2/20002       m_grad_ema_mp_grad_ema_update_rhobk_ [14]
+                0.00    0.00       3/20003       m_esfield_mp_solve_poisson_ [19]
+                0.00    0.00       1/10001       frmttd_ [87]
+                0.00    0.00       1/1           inital_ [141]
+                0.00    0.00       2/10003       oh3_transbound_ [152]
+                0.00    0.00       2/40          particle_sort_ [161]
+                0.00    0.00       1/1           m_logging_mp_logging_initialize_ [180]
+                0.00    0.00       1/1           ohinit_ [185]
+                0.00    0.00       1/1           m_grad_ema_mp_grad_ema_init_ [179]
+                0.00    0.00       1/1           getccl_ [171]
+                0.00    0.00       1/10001       psuper3_ [153]
+                0.00    0.00       1/1           chkprm_ [168]
+                0.00    0.00       1/1           digset_ [170]
+-----------------------------------------------
+                                                 <spontaneous>
+[27]     0.1    4.65    0.00                 I_MPI_memcpy_movsb [27]
+-----------------------------------------------
+                                                 <spontaneous>
+[28]     0.1    4.12    0.00                 bdw_memcpy_write [28]
+-----------------------------------------------
+                0.00    0.00       2/104515840     wrapper_mp_drann0s_ [142]
+                0.00    0.00       2/104515840     inital_ [141]
+                0.00    0.00   10000/104515840     m_esses_mp_esses_mainstep_ [3]
+                0.56    0.00 14155776/104515840     inipcl_ [44]
+                0.66    0.00 16777216/104515840     inipin_IP_assign_velocity_ [43]
+                0.78    0.00 19922944/104515840     inipin_ [35]
+                2.10    0.00 53649900/104515840     psuper1_ [16]
+[29]     0.1    4.10    0.00 104515840         genrand_res53 [29]
+-----------------------------------------------
+                                                 <spontaneous>
+[30]     0.1    3.90    0.00                 MPID_Progress_wait [30]
+-----------------------------------------------
+                                                 <spontaneous>
+[31]     0.0    3.31    0.00                 impi_shm_heap_progress [31]
+-----------------------------------------------
+                                                 <spontaneous>
+[32]     0.0    3.03    0.00                 MPIDI_POSIX_progress [32]
+-----------------------------------------------
+                                                 <spontaneous>
+[33]     0.0    3.02    0.00                 MPID_Progress_completion_count_get [33]
+-----------------------------------------------
+                                                 <spontaneous>
+[34]     0.0    2.71    0.00                 psort_comp [34]
+-----------------------------------------------
+                0.66    1.60       1/1           m_esses_mp_esses_initialize_ [26]
+[35]     0.0    0.66    1.60       1         inipin_ [35]
+                0.14    0.67      20/20          inipin_IP_assign_velocity_ [43]
+                0.78    0.00 19922944/104515840     genrand_res53 [29]
+                0.01    0.00 19922944/104505841     mtrand_real8_ [73]
+                0.00    0.00       2/2           lemses_mp_arymod_ [167]
+-----------------------------------------------
+                2.04    0.00   20000/20000       m_esses_mp_esses_mainstep_ [3]
+[36]     0.0    2.04    0.00   20000         try_stable1 [36]
+-----------------------------------------------
+                                                 <spontaneous>
+[37]     0.0    1.54    0.00                 MPIDI_SHMGR_release_generic [37]
+-----------------------------------------------
+                                                 <spontaneous>
+[38]     0.0    1.48    0.00                 MPII_Segment_manipulate [38]
+-----------------------------------------------
+                0.26    0.00   10001/40004       hdfdig_IP_calculate_output_data_ [18]
+                0.26    0.00   10001/40004       m_grad_ema_mp_grad_ema_update_rhobk_ [14]
+                0.52    0.00   20002/40004       m_esfield_mp_solve_poisson_ [19]
+[39]     0.0    1.04    0.00   40004         m_poisson_comm_mp_rh2poi_ [39]
+                0.00    0.00   40004/70007       m_poisson_comm_mp_setup_domain_ [147]
+-----------------------------------------------
+                                                 <spontaneous>
+[40]     0.0    0.99    0.00                 __I_MPI___intel_avx_rep_memcpy [40]
+-----------------------------------------------
+                0.98    0.00       1/1           m_esses_mp_esses_initialize_ [26]
+[41]     0.0    0.98    0.00       1         capmtx_ [41]
+-----------------------------------------------
+                                                 <spontaneous>
+[42]     0.0    0.92    0.00                 index_m2m [42]
+-----------------------------------------------
+                0.14    0.67      20/20          inipin_ [35]
+[43]     0.0    0.14    0.67      20         inipin_IP_assign_velocity_ [43]
+                0.66    0.00 16777216/104515840     genrand_res53 [29]
+                0.01    0.00 16777216/104505841     mtrand_real8_ [73]
+-----------------------------------------------
+                0.16    0.56       1/1           m_esses_mp_esses_initialize_ [26]
+[44]     0.0    0.16    0.56       1         inipcl_ [44]
+                0.56    0.00 14155776/104515840     genrand_res53 [29]
+                0.01    0.00 14155776/104505841     mtrand_real8_ [73]
+                0.00    0.00 2359296/2359296     oh3_map_particle_to_subdomain [145]
+                0.00    0.00 2359296/2359296     oh3_map_particle_to_subdomain_ [146]
+-----------------------------------------------
+                                                 <spontaneous>
+[45]     0.0    0.65    0.00                 progress_serialization_frame [45]
+-----------------------------------------------
+                                                 <spontaneous>
+[46]     0.0    0.63    0.00                 contig_pack_to_iov [46]
+-----------------------------------------------
+                                                 <spontaneous>
+[47]     0.0    0.55    0.00                 MPIDU_Init_shm_barrier [47]
+-----------------------------------------------
+                                                 <spontaneous>
+[48]     0.0    0.55    0.00                 vector_m2m [48]
+-----------------------------------------------
+                0.52    0.00   50005/50005       m_esses_mp_esses_charge_ [6]
+[49]     0.0    0.52    0.00   50005         add_boundary_charge_ [49]
+-----------------------------------------------
+                                                 <spontaneous>
+[50]     0.0    0.46    0.00                 impi_free [50]
+-----------------------------------------------
+                0.44    0.00 10729980/10729980     psuper1_ [16]
+[51]     0.0    0.44    0.00 10729980         psuper1_IP_current_deposition_ [51]
+-----------------------------------------------
+                0.41    0.00       1/1           m_esses_mp_esses_initialize_ [26]
+[52]     0.0    0.41    0.00       1         chgntr_ [52]
+-----------------------------------------------
+                                                 <spontaneous>
+[53]     0.0    0.31    0.00                 impi_malloc [53]
+-----------------------------------------------
+                                                 <spontaneous>
+[54]     0.0    0.27    0.00                 deserialization_from_cell [54]
+-----------------------------------------------
+                                                 <spontaneous>
+[55]     0.0    0.27    0.00                 impi_shm_isend [55]
+-----------------------------------------------
+                                                 <spontaneous>
+[56]     0.0    0.26    0.00                 I_MPI_memcpy_sse [56]
+-----------------------------------------------
+                                                 <spontaneous>
+[57]     0.0    0.21    0.00                 MPIDIG_send_origin_cb [57]
+-----------------------------------------------
+                                                 <spontaneous>
+[58]     0.0    0.19    0.00                 MPID_Progress_idle_timer_tick [58]
+-----------------------------------------------
+                                                 <spontaneous>
+[59]     0.0    0.18    0.00                 inject_cell [59]
+-----------------------------------------------
+                                                 <spontaneous>
+[60]     0.0    0.16    0.00                 MPIDI_POSIX_Bcast_intra_numa_aware [60]
+-----------------------------------------------
+                                                 <spontaneous>
+[61]     0.0    0.15    0.00                 MPIDIG_send_target_msg_cb [61]
+-----------------------------------------------
+                                                 <spontaneous>
+[62]     0.0    0.14    0.00                 recv_target_cmpl_cb [62]
+-----------------------------------------------
+                                                 <spontaneous>
+[63]     0.0    0.11    0.00                 new_cell [63]
+-----------------------------------------------
+                                                 <spontaneous>
+[64]     0.0    0.10    0.00                 MPIR_Sendrecv_impl [64]
+-----------------------------------------------
+                                                 <spontaneous>
+[65]     0.0    0.08    0.00                 MPIDIG_do_irecv [65]
+-----------------------------------------------
+                                                 <spontaneous>
+[66]     0.0    0.08    0.00                 PMPI_Isend [66]
+-----------------------------------------------
+                                                 <spontaneous>
+[67]     0.0    0.08    0.00                 PMPI_Sendrecv [67]
+-----------------------------------------------
+                0.07    0.00       1/1           MAIN__ [1]
+[68]     0.0    0.07    0.00       1         save_esdat_ [68]
+-----------------------------------------------
+                                                 <spontaneous>
+[69]     0.0    0.06    0.00                 I_MPI_memcpy_multipage_sse [69]
+-----------------------------------------------
+                                                 <spontaneous>
+[70]     0.0    0.06    0.00                 MPID_Progress_yield [70]
+-----------------------------------------------
+                                                 <spontaneous>
+[71]     0.0    0.06    0.00                 MPII_Dataloop_stackelm_load [71]
+-----------------------------------------------
+                                                 <spontaneous>
+[72]     0.0    0.06    0.00                 burst_alloc_forward_cells [72]
+-----------------------------------------------
+                0.00    0.00       2/104505841     wrapper_mp_drann0s_ [142]
+                0.00    0.00       3/104505841     inital_ [141]
+                0.01    0.00 14155776/104505841     inipcl_ [44]
+                0.01    0.00 16777216/104505841     inipin_IP_assign_velocity_ [43]
+                0.01    0.00 19922944/104505841     inipin_ [35]
+                0.03    0.00 53649900/104505841     psuper1_ [16]
+[73]     0.0    0.05    0.00 104505841         mtrand_real8_ [73]
+-----------------------------------------------
+                                                 <spontaneous>
+[74]     0.0    0.05    0.00                 MPIDIG_enqueue_unexp [74]
+-----------------------------------------------
+                0.04    0.00 10729980/10729980     psuper1_ [16]
+[75]     0.0    0.04    0.00 10729980         oh2_inject_particle [75]
+-----------------------------------------------
+                0.04    0.00       1/1           m_esses_mp_esses_initialize_ [26]
+[76]     0.0    0.04    0.00       1         rescal_ [76]
+-----------------------------------------------
+                                                 <spontaneous>
+[77]     0.0    0.04    0.00                 MPIDI_GPU_request_free [77]
+-----------------------------------------------
+                                                 <spontaneous>
+[78]     0.0    0.04    0.00                 MPIR_Request_create [78]
+-----------------------------------------------
+                                                 <spontaneous>
+[79]     0.0    0.04    0.00                 MPIR_Segment_alloc [79]
+-----------------------------------------------
+                                                 <spontaneous>
+[80]     0.0    0.04    0.00                 memcpy_loop_loadu_store_sse [80]
+-----------------------------------------------
+                                                 <spontaneous>
+[81]     0.0    0.03    0.00                 I_MPI_memcpy_compiler_noarch [81]
+-----------------------------------------------
+                                                 <spontaneous>
+[82]     0.0    0.03    0.00                 MPIDI_CH4_check_container [82]
+-----------------------------------------------
+                                                 <spontaneous>
+[83]     0.0    0.03    0.00                 noinline_progress [83]
+-----------------------------------------------
+                                                 <spontaneous>
+[84]     0.0    0.03    0.00                 progress_serialization [84]
+-----------------------------------------------
+                0.00    0.00   10001/30003       hdfdig_IP_calculate_output_data_ [18]
+                0.01    0.01   20002/30003       m_esfield_mp_solve_poisson_ [19]
+[85]     0.0    0.01    0.01   30003         m_poisson_comm_mp_poi2phi_ [85]
+                0.01    0.00   30003/30003       m_poisson_comm_mp_gather_phi_from_work_ [99]
+                0.00    0.00   30003/70007       m_poisson_comm_mp_setup_domain_ [147]
+-----------------------------------------------
+                0.02    0.00   10003/10003       hdfdig_ [17]
+[86]     0.0    0.02    0.00   10003         hdfdig_IP_output_field_data_ [86]
+                0.00    0.00     264/264         hdf5io_mp_wrt3d_p_ [160]
+-----------------------------------------------
+                0.00    0.00       1/10001       m_esses_mp_esses_initialize_ [26]
+                0.02    0.00   10000/10001       m_esses_mp_esses_mainstep_ [3]
+[87]     0.0    0.02    0.00   10001         frmttd_ [87]
+-----------------------------------------------
+                                                 <spontaneous>
+[88]     0.0    0.02    0.00                 MPIDI_coll_invoke [88]
+-----------------------------------------------
+                                                 <spontaneous>
+[89]     0.0    0.02    0.00                 MPID_Reduce_invoke [89]
+-----------------------------------------------
+                                                 <spontaneous>
+[90]     0.0    0.02    0.00                 MPIR_Alltoall_intra_brucks [90]
+-----------------------------------------------
+                                                 <spontaneous>
+[91]     0.0    0.02    0.00                 MPIR_Request_create [91]
+-----------------------------------------------
+                                                 <spontaneous>
+[92]     0.0    0.02    0.00                 MPIR_SUM_check_dtype [92]
+-----------------------------------------------
+                                                 <spontaneous>
+[93]     0.0    0.02    0.00                 MPIR_Waitall [93]
+-----------------------------------------------
+                                                 <spontaneous>
+[94]     0.0    0.02    0.00                 PMPI_Alltoall [94]
+-----------------------------------------------
+                                                 <spontaneous>
+[95]     0.0    0.02    0.00                 memcpy_loop_load_store_sse [95]
+-----------------------------------------------
+                                                 <spontaneous>
+[96]     0.0    0.02    0.00                 update_type_blockindexed [96]
+-----------------------------------------------
+                                                 <spontaneous>
+[97]     0.0    0.02    0.00                 vector_pack_to_iov [97]
+-----------------------------------------------
+                0.00    0.00   20000/70005       m_esses_mp_esses_mainstep_ [3]
+                0.01    0.00   50005/70005       m_esses_mp_esses_charge_ [6]
+[98]     0.0    0.01    0.00   70005         oh3_exchange_borders_ [98]
+-----------------------------------------------
+                0.01    0.00   30003/30003       m_poisson_comm_mp_poi2phi_ [85]
+[99]     0.0    0.01    0.00   30003         m_poisson_comm_mp_gather_phi_from_work_ [99]
+-----------------------------------------------
+                0.01    0.00   10000/10000       m_esses_mp_esses_mainstep_ [3]
+[100]    0.0    0.01    0.00   10000         m_conductivity_mp_update_conductive_rhobk_ [100]
+-----------------------------------------------
+                0.01    0.00       1/1           m_esses_mp_esses_initialize_ [26]
+[101]    0.0    0.01    0.00       1         inifld_ [101]
+-----------------------------------------------
+                                                 <spontaneous>
+[102]    0.0    0.01    0.00                 ADIOI_Flatten_and_find [102]
+-----------------------------------------------
+                                                 <spontaneous>
+[103]    0.0    0.01    0.00                 ADIOI_Optimize_flattened [103]
+-----------------------------------------------
+                                                 <spontaneous>
+[104]    0.0    0.01    0.00                 MPIC_Wait [104]
+-----------------------------------------------
+                                                 <spontaneous>
+[105]    0.0    0.01    0.00                 MPIDI_OFI_coll_select [105]
+-----------------------------------------------
+                                                 <spontaneous>
+[106]    0.0    0.01    0.00                 MPIDI_POSIX_eager_recv_posted_hook [106]
+-----------------------------------------------
+                                                 <spontaneous>
+[107]    0.0    0.01    0.00                 MPIDI_anysrc_try_cancel_partner [107]
+-----------------------------------------------
+                                                 <spontaneous>
+[108]    0.0    0.01    0.00                 MPIDU_Init_shm_init [108]
+-----------------------------------------------
+                                                 <spontaneous>
+[109]    0.0    0.01    0.00                 MPID_Progress_idle_timer_start [109]
+-----------------------------------------------
+                                                 <spontaneous>
+[110]    0.0    0.01    0.00                 MPID_Progress_test_impl [110]
+-----------------------------------------------
+                                                 <spontaneous>
+[111]    0.0    0.01    0.00                 MPII_Dataloop_update [111]
+-----------------------------------------------
+                                                 <spontaneous>
+[112]    0.0    0.01    0.00                 MPIR_Datatype_iscontig [112]
+-----------------------------------------------
+                                                 <spontaneous>
+[113]    0.0    0.01    0.00                 MPIR_Localcopy [113]
+-----------------------------------------------
+                                                 <spontaneous>
+[114]    0.0    0.01    0.00                 MPIR_Reduce_local [114]
+                0.00    0.00   50010/50010       sumcount_ [148]
+-----------------------------------------------
+                                                 <spontaneous>
+[115]    0.0    0.01    0.00                 MPIR_Request_completion_processing [115]
+-----------------------------------------------
+                                                 <spontaneous>
+[116]    0.0    0.01    0.00                 MPIR_Request_create [116]
+-----------------------------------------------
+                                                 <spontaneous>
+[117]    0.0    0.01    0.00                 MPIR_Request_create [117]
+-----------------------------------------------
+                                                 <spontaneous>
+[118]    0.0    0.01    0.00                 MPIR_Request_free [118]
+-----------------------------------------------
+                                                 <spontaneous>
+[119]    0.0    0.01    0.00                 MPIR_Segment_to_iov [119]
+-----------------------------------------------
+                                                 <spontaneous>
+[120]    0.0    0.01    0.00                 MPIR_T_cvar_init [120]
+-----------------------------------------------
+                                                 <spontaneous>
+[121]    0.0    0.01    0.00                 MPIR_Typerep_commit [121]
+-----------------------------------------------
+                                                 <spontaneous>
+[122]    0.0    0.01    0.00                 MPIR_Typerep_ipack [122]
+-----------------------------------------------
+                                                 <spontaneous>
+[123]    0.0    0.01    0.00                 MPIR_Typerep_to_iov [123]
+-----------------------------------------------
+                                                 <spontaneous>
+[124]    0.0    0.01    0.00                 MPIR_Typerep_unpack [124]
+-----------------------------------------------
+                                                 <spontaneous>
+[125]    0.0    0.01    0.00                 MPIR_Waitall_impl [125]
+-----------------------------------------------
+                                                 <spontaneous>
+[126]    0.0    0.01    0.00                 MPIU_Selection_find_entry [126]
+-----------------------------------------------
+                                                 <spontaneous>
+[127]    0.0    0.01    0.00                 MPIU_Selection_set_coll_match_pattern [127]
+-----------------------------------------------
+                                                 <spontaneous>
+[128]    0.0    0.01    0.00                 MPI_Type_contiguous [128]
+-----------------------------------------------
+                                                 <spontaneous>
+[129]    0.0    0.01    0.00                 MPI_Waitall [129]
+-----------------------------------------------
+                                                 <spontaneous>
+[130]    0.0    0.01    0.00                 MPL_wtime_acc [130]
+-----------------------------------------------
+                                                 <spontaneous>
+[131]    0.0    0.01    0.00                 PMPI_Comm_size [131]
+-----------------------------------------------
+                                                 <spontaneous>
+[132]    0.0    0.01    0.00                 PMPI_Irecv [132]
+-----------------------------------------------
+                                                 <spontaneous>
+[133]    0.0    0.01    0.00                 blkidx_m2m [133]
+-----------------------------------------------
+                                                 <spontaneous>
+[134]    0.0    0.01    0.00                 delete_unexp_request [134]
+-----------------------------------------------
+                                                 <spontaneous>
+[135]    0.0    0.01    0.00                 get_1_sector [135]
+-----------------------------------------------
+                                                 <spontaneous>
+[136]    0.0    0.01    0.00                 impi_reduce_local_2way [136]
+-----------------------------------------------
+                                                 <spontaneous>
+[137]    0.0    0.01    0.00                 pmpi_irecv__ [137]
+-----------------------------------------------
+                                                 <spontaneous>
+[138]    0.0    0.01    0.00                 pmpi_isend_ [138]
+-----------------------------------------------
+                                                 <spontaneous>
+[139]    0.0    0.01    0.00                 pmpi_reduce__ [139]
+-----------------------------------------------
+                                                 <spontaneous>
+[140]    0.0    0.01    0.00                 __intel_cpu_features_init_body [140]
+-----------------------------------------------
+                0.00    0.00       1/1           m_esses_mp_esses_initialize_ [26]
+[141]    0.0    0.00    0.00       1         inital_ [141]
+                0.00    0.00       4/4           wrapper_mp_drann0s_ [142]
+                0.00    0.00       2/104515840     genrand_res53 [29]
+                0.00    0.00       3/104505841     mtrand_real8_ [73]
+                0.00    0.00       4/4           mt_init_ [162]
+                0.00    0.00       4/4           wrapper_mp_randinit0_ [163]
+                0.00    0.00       2/2           inifft_ [166]
+                0.00    0.00       1/1           inital_IP_getgcd_ [176]
+                0.00    0.00       1/1           inital_IP_lediv_ [177]
+                0.00    0.00       1/1           defmpi_ [169]
+-----------------------------------------------
+                0.00    0.00       4/4           inital_ [141]
+[142]    0.0    0.00    0.00       4         wrapper_mp_drann0s_ [142]
+                0.00    0.00       2/104515840     genrand_res53 [29]
+                0.00    0.00       2/104505841     mtrand_real8_ [73]
+-----------------------------------------------
+[143]    0.0    0.00    0.00       2+2       <cycle 1 as a whole> [143]
+                0.00    0.00       3+6           set_border_exchange <cycle 1> [165]
+                0.00    0.00       1             init2 <cycle 1> [173]
+-----------------------------------------------
+                0.00    0.00 10729980/10729980     psuper1_ [16]
+[144]    0.0    0.00    0.00 10729980         oh2_inject_particle_ [144]
+-----------------------------------------------
+                0.00    0.00 2359296/2359296     inipcl_ [44]
+[145]    0.0    0.00    0.00 2359296         oh3_map_particle_to_subdomain [145]
+-----------------------------------------------
+                0.00    0.00 2359296/2359296     inipcl_ [44]
+[146]    0.0    0.00    0.00 2359296         oh3_map_particle_to_subdomain_ [146]
+-----------------------------------------------
+                0.00    0.00   30003/70007       m_poisson_comm_mp_poi2phi_ [85]
+                0.00    0.00   40004/70007       m_poisson_comm_mp_rh2poi_ [39]
+[147]    0.0    0.00    0.00   70007         m_poisson_comm_mp_setup_domain_ [147]
+-----------------------------------------------
+                0.00    0.00   50010/50010       MPIR_Reduce_local [114]
+[148]    0.0    0.00    0.00   50010         sumcount_ [148]
+-----------------------------------------------
+                0.00    0.00   10001/40004       hdfdig_IP_calculate_output_data_ [18]
+                0.00    0.00   10001/40004       m_grad_ema_mp_grad_ema_update_rhobk_ [14]
+                0.00    0.00   20002/40004       m_esfield_mp_solve_poisson_ [19]
+[149]    0.0    0.00    0.00   40004         m_poisson_mp_poisson_ [149]
+-----------------------------------------------
+                0.00    0.00   10003/10003       hdfdig_ [17]
+[150]    0.0    0.00    0.00   10003         hdfdig_IP_calculate_constants_ [150]
+-----------------------------------------------
+                0.00    0.00   10003/10003       hdfdig_ [17]
+[151]    0.0    0.00    0.00   10003         hdfdig_IP_output_particle_data_ [151]
+-----------------------------------------------
+                0.00    0.00       1/10003       MAIN__ [1]
+                0.00    0.00       2/10003       m_esses_mp_esses_initialize_ [26]
+                0.00    0.00   10000/10003       m_esses_mp_esses_mainstep_ [3]
+[152]    0.0    0.00    0.00   10003         oh3_transbound_ [152]
+-----------------------------------------------
+                0.00    0.00       1/10001       m_esses_mp_esses_initialize_ [26]
+                0.00    0.00   10000/10001       m_esses_mp_esses_mainstep_ [3]
+[153]    0.0    0.00    0.00   10001         psuper3_ [153]
+-----------------------------------------------
+                0.00    0.00   10000/10000       m_plane_boundary_mp_planexyz_is_overlap_ [155]
+[154]    0.0    0.00    0.00   10000         m_boundary_mp_get_default_extent_ [154]
+-----------------------------------------------
+                0.00    0.00   10000/10000       particle_collisioncreate_simple_collision_boundaries_mp_add_flat_surface_ [158]
+[155]    0.0    0.00    0.00   10000         m_plane_boundary_mp_planexyz_is_overlap_ [155]
+                0.00    0.00   10000/10000       m_boundary_mp_get_default_extent_ [154]
+-----------------------------------------------
+                0.00    0.00   10000/10000       m_esses_mp_esses_mainstep_ [3]
+[156]    0.0    0.00    0.00   10000         m_str_mp_int_to_str_ [156]
+-----------------------------------------------
+                0.00    0.00   10000/10000       psolve_ [4]
+[157]    0.0    0.00    0.00   10000         particle_collision_mp_create_simple_collision_boundaries_ [157]
+                0.00    0.00   10000/10000       particle_collisioncreate_simple_collision_boundaries_mp_add_flat_surface_ [158]
+-----------------------------------------------
+                0.00    0.00   10000/10000       particle_collision_mp_create_simple_collision_boundaries_ [157]
+[158]    0.0    0.00    0.00   10000         particle_collisioncreate_simple_collision_boundaries_mp_add_flat_surface_ [158]
+                0.00    0.00   10000/10000       m_plane_boundary_mp_planexyz_is_overlap_ [155]
+-----------------------------------------------
+                0.00    0.00     623/623         getccl_ [171]
+[159]    0.0    0.00    0.00     623         getccl_IP_chk_dupli_ [159]
+-----------------------------------------------
+                0.00    0.00     264/264         hdfdig_IP_output_field_data_ [86]
+[160]    0.0    0.00    0.00     264         hdf5io_mp_wrt3d_p_ [160]
+-----------------------------------------------
+                0.00    0.00       2/40          m_esses_mp_esses_initialize_ [26]
+                0.00    0.00      38/40          m_esses_mp_esses_mainstep_ [3]
+[161]    0.0    0.00    0.00      40         particle_sort_ [161]
+-----------------------------------------------
+                0.00    0.00       4/4           inital_ [141]
+[162]    0.0    0.00    0.00       4         mt_init_ [162]
+                0.00    0.00       1/1           init_genrand [174]
+-----------------------------------------------
+                0.00    0.00       4/4           inital_ [141]
+[163]    0.0    0.00    0.00       4         wrapper_mp_randinit0_ [163]
+-----------------------------------------------
+                0.00    0.00       3/3           m_logging_mp_logging_initialize_ [180]
+[164]    0.0    0.00    0.00       3         m_logging_mp_get_env_ [164]
+-----------------------------------------------
+                                   6             set_border_exchange <cycle 1> [165]
+                                   1             init2 <cycle 1> [173]
+                0.00    0.00       2/2           oh3_init_ [184]
+[165]    0.0    0.00    0.00       3+6       set_border_exchange <cycle 1> [165]
+                0.00    0.00       1/1           init_subdomain_actively [175]
+                                   1             init2 <cycle 1> [173]
+                                   6             set_border_exchange <cycle 1> [165]
+-----------------------------------------------
+                0.00    0.00       2/2           inital_ [141]
+[166]    0.0    0.00    0.00       2         inifft_ [166]
+-----------------------------------------------
+                0.00    0.00       2/2           inipin_ [35]
+[167]    0.0    0.00    0.00       2         lemses_mp_arymod_ [167]
+-----------------------------------------------
+                0.00    0.00       1/1           m_esses_mp_esses_initialize_ [26]
+[168]    0.0    0.00    0.00       1         chkprm_ [168]
+-----------------------------------------------
+                0.00    0.00       1/1           inital_ [141]
+[169]    0.0    0.00    0.00       1         defmpi_ [169]
+-----------------------------------------------
+                0.00    0.00       1/1           m_esses_mp_esses_initialize_ [26]
+[170]    0.0    0.00    0.00       1         digset_ [170]
+-----------------------------------------------
+                0.00    0.00       1/1           m_esses_mp_esses_initialize_ [26]
+[171]    0.0    0.00    0.00       1         getccl_ [171]
+                0.00    0.00     623/623         getccl_IP_chk_dupli_ [159]
+-----------------------------------------------
+                0.00    0.00       1/1           MAIN__ [1]
+[172]    0.0    0.00    0.00       1         hdf5io_mp_hdfinit_ [172]
+-----------------------------------------------
+                                   1             set_border_exchange <cycle 1> [165]
+[173]    0.0    0.00    0.00       1         init2 <cycle 1> [173]
+                                   1             set_border_exchange <cycle 1> [165]
+-----------------------------------------------
+                0.00    0.00       1/1           mt_init_ [162]
+[174]    0.0    0.00    0.00       1         init_genrand [174]
+-----------------------------------------------
+                0.00    0.00       1/1           set_border_exchange <cycle 1> [165]
+[175]    0.0    0.00    0.00       1         init_subdomain_actively [175]
+-----------------------------------------------
+                0.00    0.00       1/1           inital_ [141]
+[176]    0.0    0.00    0.00       1         inital_IP_getgcd_ [176]
+-----------------------------------------------
+                0.00    0.00       1/1           inital_ [141]
+[177]    0.0    0.00    0.00       1         inital_IP_lediv_ [177]
+-----------------------------------------------
+                0.00    0.00       1/1           MAIN__ [1]
+[178]    0.0    0.00    0.00       1         input_ [178]
+-----------------------------------------------
+                0.00    0.00       1/1           m_esses_mp_esses_initialize_ [26]
+[179]    0.0    0.00    0.00       1         m_grad_ema_mp_grad_ema_init_ [179]
+-----------------------------------------------
+                0.00    0.00       1/1           m_esses_mp_esses_initialize_ [26]
+[180]    0.0    0.00    0.00       1         m_logging_mp_logging_initialize_ [180]
+                0.00    0.00       3/3           m_logging_mp_get_env_ [164]
+-----------------------------------------------
+                0.00    0.00       1/1           MAIN__ [1]
+[181]    0.0    0.00    0.00       1         oh1_fam_comm_ [181]
+-----------------------------------------------
+                0.00    0.00       1/1           ohinit_ [185]
+[182]    0.0    0.00    0.00       1         oh2_max_local_particles [182]
+-----------------------------------------------
+                0.00    0.00       1/1           ohinit_ [185]
+[183]    0.0    0.00    0.00       1         oh2_max_local_particles_ [183]
+-----------------------------------------------
+                0.00    0.00       1/1           ohinit_ [185]
+[184]    0.0    0.00    0.00       1         oh3_init_ [184]
+                0.00    0.00       2/2           set_border_exchange <cycle 1> [165]
+-----------------------------------------------
+                0.00    0.00       1/1           m_esses_mp_esses_initialize_ [26]
+[185]    0.0    0.00    0.00       1         ohinit_ [185]
+                0.00    0.00       1/1           oh2_max_local_particles [182]
+                0.00    0.00       1/1           oh2_max_local_particles_ [183]
+                0.00    0.00       1/1           oh3_init_ [184]
+-----------------------------------------------
+
+ This table describes the call tree of the program, and was sorted by
+ the total amount of time spent in each function and its children.
+
+ Each entry in this table consists of several lines.  The line with the
+ index number at the left hand margin lists the current function.
+ The lines above it list the functions that called this function,
+ and the lines below it list the functions this one called.
+ This line lists:
+     index	A unique number given to each element of the table.
+		Index numbers are sorted numerically.
+		The index number is printed next to every function name so
+		it is easier to look up where the function is in the table.
+
+     % time	This is the percentage of the `total' time that was spent
+		in this function and its children.  Note that due to
+		different viewpoints, functions excluded by options, etc,
+		these numbers will NOT add up to 100%.
+
+     self	This is the total amount of time spent in this function.
+
+     children	This is the total amount of time propagated into this
+		function by its children.
+
+     called	This is the number of times the function was called.
+		If the function called itself recursively, the number
+		only includes non-recursive calls, and is followed by
+		a `+' and the number of recursive calls.
+
+     name	The name of the current function.  The index number is
+		printed after it.  If the function is a member of a
+		cycle, the cycle number is printed between the
+		function's name and the index number.
+
+
+ For the function's parents, the fields have the following meanings:
+
+     self	This is the amount of time that was propagated directly
+		from the function into this parent.
+
+     children	This is the amount of time that was propagated from
+		the function's children into this parent.
+
+     called	This is the number of times this parent called the
+		function `/' the total number of times the function
+		was called.  Recursive calls to the function are not
+		included in the number after the `/'.
+
+     name	This is the name of the parent.  The parent's index
+		number is printed after it.  If the parent is a
+		member of a cycle, the cycle number is printed between
+		the name and the index number.
+
+ If the parents of the function cannot be determined, the word
+ `<spontaneous>' is printed in the `name' field, and all the other
+ fields are blank.
+
+ For the function's children, the fields have the following meanings:
+
+     self	This is the amount of time that was propagated directly
+		from the child into the function.
+
+     children	This is the amount of time that was propagated from the
+		child's children to the function.
+
+     called	This is the number of times the function called
+		this child `/' the total number of times the child
+		was called.  Recursive calls by the child are not
+		listed in the number after the `/'.
+
+     name	This is the name of the child.  The child's index
+		number is printed after it.  If the child is a
+		member of a cycle, the cycle number is printed
+		between the name and the index number.
+
+ If there are any cycles (circles) in the call graph, there is an
+ entry for the cycle-as-a-whole.  This entry shows who called the
+ cycle (as parents) and the members of the cycle (as children.)
+ The `+' recursive calls entry shows the number of function calls that
+ were internal to the cycle, and the calls entry for each member shows,
+ for that member, how many times it was called from other members of
+ the cycle.
+
+Copyright (C) 2012-2018 Free Software Foundation, Inc.
+
+Copying and distribution of this file, with or without modification,
+are permitted in any medium without royalty provided the copyright
+notice and this notice are preserved.
+
+Index by function name
+
+ [102] ADIOI_Flatten_and_find [129] MPI_Waitall            [3] m_esses_mp_esses_mainstep_
+ [103] ADIOI_Optimize_flattened [130] MPL_wtime_acc      [179] m_grad_ema_mp_grad_ema_init_
+  [81] I_MPI_memcpy_compiler_noarch [94] PMPI_Alltoall    [14] m_grad_ema_mp_grad_ema_update_rhobk_
+  [27] I_MPI_memcpy_movsb    [131] PMPI_Comm_size        [164] m_logging_mp_get_env_
+  [69] I_MPI_memcpy_multipage_sse [132] PMPI_Irecv       [180] m_logging_mp_logging_initialize_
+  [56] I_MPI_memcpy_sse       [66] PMPI_Isend            [155] m_plane_boundary_mp_planexyz_is_overlap_
+   [1] MAIN__                 [67] PMPI_Sendrecv          [99] m_poisson_comm_mp_gather_phi_from_work_
+ [104] MPIC_Wait              [40] __I_MPI___intel_avx_rep_memcpy [85] m_poisson_comm_mp_poi2phi_
+  [65] MPIDIG_do_irecv       [140] __intel_cpu_features_init_body [39] m_poisson_comm_mp_rh2poi_
+  [74] MPIDIG_enqueue_unexp   [49] add_boundary_charge_  [147] m_poisson_comm_mp_setup_domain_
+  [57] MPIDIG_send_origin_cb  [28] bdw_memcpy_write      [149] m_poisson_mp_poisson_
+  [61] MPIDIG_send_target_msg_cb [133] blkidx_m2m        [156] m_str_mp_int_to_str_
+  [82] MPIDI_CH4_check_container [72] burst_alloc_forward_cells [95] memcpy_loop_load_store_sse
+  [77] MPIDI_GPU_request_free [41] capmtx_                [80] memcpy_loop_loadu_store_sse
+ [105] MPIDI_OFI_coll_select   [5] charge_                [10] move_to_sendbuf_primary
+  [22] MPIDI_OFI_get_buffered [52] chgntr_               [162] mt_init_
+  [20] MPIDI_OFI_progress    [168] chkprm_                [73] mtrand_real8_
+  [60] MPIDI_POSIX_Bcast_intra_numa_aware [46] contig_pack_to_iov [63] new_cell
+ [106] MPIDI_POSIX_eager_recv_posted_hook [169] defmpi_   [83] noinline_progress
+  [32] MPIDI_POSIX_progress  [134] delete_unexp_request  [181] oh1_fam_comm_
+  [15] MPIDI_Progress_test    [54] deserialization_from_cell [75] oh2_inject_particle
+  [37] MPIDI_SHMGR_release_generic [170] digset_         [144] oh2_inject_particle_
+  [25] MPIDI_SHMI_progress    [87] frmttd_               [182] oh2_max_local_particles
+ [107] MPIDI_anysrc_try_cancel_partner [29] genrand_res53 [183] oh2_max_local_particles_
+  [88] MPIDI_coll_invoke     [135] get_1_sector           [98] oh3_exchange_borders_
+  [47] MPIDU_Init_shm_barrier [171] getccl_              [184] oh3_init_
+ [108] MPIDU_Init_shm_init   [159] getccl_IP_chk_dupli_  [145] oh3_map_particle_to_subdomain
+  [33] MPID_Progress_completion_count_get [172] hdf5io_mp_hdfinit_ [146] oh3_map_particle_to_subdomain_
+ [109] MPID_Progress_idle_timer_start [160] hdf5io_mp_wrt3d_p_ [152] oh3_transbound_
+  [58] MPID_Progress_idle_timer_tick [17] hdfdig_        [185] ohinit_
+ [110] MPID_Progress_test_impl [150] hdfdig_IP_calculate_constants_ [157] particle_collision_mp_create_simple_collision_boundaries_
+  [30] MPID_Progress_wait     [18] hdfdig_IP_calculate_output_data_ [158] particle_collisioncreate_simple_collision_boundaries_mp_add_flat_surface_
+  [70] MPID_Progress_yield    [86] hdfdig_IP_output_field_data_ [161] particle_sort_
+  [89] MPID_Reduce_invoke    [151] hdfdig_IP_output_particle_data_ [137] pmpi_irecv__
+  [71] MPII_Dataloop_stackelm_load [50] impi_free        [138] pmpi_isend_
+ [111] MPII_Dataloop_update   [53] impi_malloc           [139] pmpi_reduce__
+  [38] MPII_Segment_manipulate [136] impi_reduce_local_2way [23] progress_deserialization
+  [90] MPIR_Alltoall_intra_brucks [13] impi_shm_bcast     [21] progress_rings
+ [112] MPIR_Datatype_iscontig [31] impi_shm_heap_progress [84] progress_serialization
+ [113] MPIR_Localcopy         [55] impi_shm_isend         [45] progress_serialization_frame
+  [12] MPIR_Progress_hook_exec_on_vci [11] impi_shm_progress [4] psolve_
+ [114] MPIR_Reduce_local      [24] impi_shm_reduce        [34] psort_comp
+ [115] MPIR_Request_completion_processing [42] index_m2m  [16] psuper1_
+  [78] MPIR_Request_create   [166] inifft_                [51] psuper1_IP_current_deposition_
+  [91] MPIR_Request_create   [101] inifld_               [153] psuper3_
+ [116] MPIR_Request_create    [44] inipcl_                [62] recv_target_cmpl_cb
+ [117] MPIR_Request_create    [35] inipin_                [76] rescal_
+ [118] MPIR_Request_free      [43] inipin_IP_assign_velocity_ [68] save_esdat_
+  [92] MPIR_SUM_check_dtype  [173] init2                 [165] set_border_exchange
+  [79] MPIR_Segment_alloc    [174] init_genrand          [148] sumcount_
+ [119] MPIR_Segment_to_iov   [175] init_subdomain_actively [8] transbound2
+  [64] MPIR_Sendrecv_impl    [141] inital_                 [7] transbound3
+ [120] MPIR_T_cvar_init      [176] inital_IP_getgcd_       [9] try_primary2
+ [121] MPIR_Typerep_commit   [177] inital_IP_lediv_       [36] try_stable1
+ [122] MPIR_Typerep_ipack     [59] inject_cell            [96] update_type_blockindexed
+ [123] MPIR_Typerep_to_iov   [178] input_                 [48] vector_m2m
+ [124] MPIR_Typerep_unpack   [167] lemses_mp_arymod_      [97] vector_pack_to_iov
+  [93] MPIR_Waitall          [154] m_boundary_mp_get_default_extent_ [142] wrapper_mp_drann0s_
+ [125] MPIR_Waitall_impl     [100] m_conductivity_mp_update_conductive_rhobk_ [163] wrapper_mp_randinit0_
+ [126] MPIU_Selection_find_entry [19] m_esfield_mp_solve_poisson_ [143] <cycle 1>
+ [127] MPIU_Selection_set_coll_match_pattern [6] m_esses_mp_esses_charge_
+ [128] MPI_Type_contiguous    [26] m_esses_mp_esses_initialize_
